@@ -4,10 +4,12 @@
 \alias{pre_processing_GS_wrapper}
 \title{GSimp Pre-processing and Imputation Wrapper}
 \usage{
-pre_processing_GS_wrapper(data)
+pre_processing_GS_wrapper(data, cores = 2)
 }
 \arguments{
 \item{data}{A numeric matrix or data frame with missing values}
+
+\item{cores}{Number of cores used for calculation \link{default: 2}}
 }
 \value{
 Imputed dataset after complete processing pipeline

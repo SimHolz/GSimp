@@ -123,6 +123,7 @@ QRILC_wrapper <- function(data, ...) {
 #' @description Comprehensive wrapper for GSimp imputation including pre-processing steps:
 #'              log transformation, QRILC initialization, scaling, imputation, and recovery
 #' @param data A numeric matrix or data frame with missing values
+#' @param cores Number of cores used for calculation [default: 2]
 #' @return Imputed dataset after complete processing pipeline
 #' @details The function performs the following steps:
 #'   1. Log transformation of input data
@@ -132,7 +133,7 @@ QRILC_wrapper <- function(data, ...) {
 #'   5. Recovery of original scale
 #'   6. Exponential transformation
 #' @export
-pre_processing_GS_wrapper <- function(data) {
+pre_processing_GS_wrapper <- function(data, cores=2) {
   data_raw <- data
   ## log transformation ##
   data_raw_log <- data_raw %>% log()
@@ -153,7 +154,7 @@ pre_processing_GS_wrapper <- function(data) {
   ## GSimp imputation with initialized data and missing data ##
   result <- data_raw_log_sc %>% GS_impute(., iters_each=50, iters_all=10, 
                                           initial = data_raw_log_qrilc_sc_df,
-                                          lo=-Inf, hi= 'min', n_cores=2,
+                                          lo=-Inf, hi= 'min', n_cores=cores,
                                           imp_model='glmnet_pred')
   data_imp_log_sc <- result$data_imp
   ## Data recovery ##

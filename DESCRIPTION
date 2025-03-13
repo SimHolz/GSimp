@@ -32,7 +32,6 @@ Description: Implements Gibbs sampler-based left-censored missing value imputati
     -omics studies.
 License: CC BY-NC-SA 4.0
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports:
