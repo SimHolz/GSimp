@@ -4,7 +4,8 @@ Version: 0.1.0
 Authors@R: 
     c(person(given = "Runmin", 
              family = "Wei",
-             role = c("aut", "cre")),
+             role = c("aut", "cre"),
+             email = "WandeRum@users.noreply.github.com"),
       person(given = "Jingye",
              family = "Wang",
              role = c("aut", "cre"),
