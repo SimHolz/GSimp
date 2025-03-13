@@ -8,7 +8,7 @@ Authors@R:
              email = "WandeRum@users.noreply.github.com"),
       person(given = "Jingye",
              family = "Wang",
-             role = c("aut", "cre"),
+             role = c("aut"),
              email = "jingyew@hawaii.edu"),
       person(given = "Enyou",
              family = "Jia",
