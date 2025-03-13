@@ -1,0 +1,62 @@
+Package: GSimp
+Title: GSimp: A Gibbs sampler based left-censored missing value imputation approach for metabolomics studies
+Version: 0.1.0
+Authors@R: 
+    c(person(given = "Runmin", 
+             family = "Wei",
+             role = c("aut", "cre")),
+      person(given = "Jingye",
+             family = "Wang",
+             role = "aut",
+             email = "jingyew@hawaii.edu"),
+      person(given = "Enyou",
+             family = "Jia",
+             role = "aut"),
+      person(given = "Tianlu",
+             family = "Chen",
+             role = "aut"),
+      person(given = "Yan",
+             family = "Ni",
+             role = "aut"),
+      person(given = "Wei",
+             family = "Jia",
+             role = "aut"))
+Description: Implements Gibbs sampler-based left-censored missing value imputation 
+    methods for metabolomics data. The package provides tools for handling missing 
+    values in both targeted and untargeted metabolomics datasets, with a focus on 
+    left-censored missing not at random (MNAR) data. Features include data 
+    pre-processing, missing value imputation using GSimp, QRILC, and kNN-TN 
+    approaches, and evaluation tools for comparing imputation methods. The package 
+    can be extended to handle different types of missingness (MCAR, MAR) and other 
+    -omics studies.
+License: CC BY-NC-SA 4.0
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    missForest,
+    impute,
+    magrittr,
+    imputeLCMD,
+    randomForest,
+    glmnet,
+    rpart,
+    FNN,
+    MASS,
+    mvtnorm,
+    Matrix,
+    foreach,
+    doParallel,
+    Amelia,
+    abind,
+    ggplot2,
+    reshape2,
+    ropls,
+    vegan,
+    pheatmap
+Suggests:
+    knitr,
+    rmarkdown,
+    markdown
+VignetteBuilder: knitr 
